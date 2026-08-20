@@ -1,0 +1,25 @@
+// Source code is decompiled from a .class file using FernFlower decompiler (from Intellij IDEA).
+import java.util.Scanner;
+
+public class vowels {
+   public vowels() {
+   }
+
+   public class FindthelengthofName {
+      public FindthelengthofName() {
+      }
+
+      public static void main(String[] var0) {
+         Scanner var1 = new Scanner(System.in);
+         System.out.println("Enter Your Name:");
+         String var2 = var1.next();
+         int var3 = var2.length();
+
+         for(int var4 = 0; var4 <= var3; ++var4) {
+            System.err.println("name.charAt(i)");
+            var1.close();
+         }
+
+      }
+   }
+}

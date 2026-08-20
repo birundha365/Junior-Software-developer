@@ -1,0 +1,12 @@
+Intro Linux:
+============
+    * linux is a Os(Operating system)
+ linux os advantages:
+========================
+    * high security
+    * data safe
+    * no need to anti virus
+disadvantages:
+==============
+    * work to har
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+      function findoddeven()
+      {
+        var v1=parseInt(document.getElementById("n1").value);
+        var res="";
+        if(v1%2==0)
+        res="EVEN";
+      
+      else{
+          res="ODD";
+      }
+      if(res=="EVEN")
+      {
+        document.getElementById("r1").innerHTML="<font color='green'>Result:"+res;
+                
+      }
+      else
+      {
+        document.getElementById("r1").innerHTML="<font color='red'>Result:"+res;
+                
+      }
+    }
+    </script>
+
+</head>
+<body>
+    <input type="text" id="n1" placeholder="Enter a number:"><br>
+    <input type="button" value="result" onclick="findoddeven()">
+    <div id="r1"></div>
+</body>
+</html>

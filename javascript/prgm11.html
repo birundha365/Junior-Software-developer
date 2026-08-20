@@ -1,0 +1,29 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        var i=0;
+        function slideimg(){
+            if(i==1)
+            document.getElementById("img").src="./images/brins a.jpeg";
+            if(i==2)
+            document.getElementById("img").src="./images/brins b.jpeg";  
+            if(i==3)
+            document.getElementById("img").src="./images/brins c.jpeg";
+        i++;
+        if(i>=4)
+        i=1;
+    setTimeout(slideimg,500)
+        }
+    </script>
+</head>
+<body onload="slideimg()">
+    <h1><center>Image Sliding</center></h1>
+    <center>
+        <img id="img"style="border: 20px ridge pink;" src="./images/brins a.jpega.jpg" width="50%">
+    </center>
+</body>
+</html>

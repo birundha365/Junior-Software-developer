@@ -3,11 +3,19 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+//var sname="Birundha"
+//var marks=[77,88,99,100,67];
+//var stud={rno:1001,sname:"Birundha",mark:60,result:"pass"?"pass":fail}
+var stud={
+  rno:1001,
+  sname:"Brindha",
+  marks:[99,77,88],
+  result:null
+}
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <App data={stud}/>
   </React.StrictMode>
 );
 

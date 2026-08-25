@@ -1,4 +1,210 @@
 import React from 'react'
+import axios from 'axios'
+import { useState } from 'react'
+
+function App() {
+  const [city, setCity] = useState("Birundha")
+  const [result, setResult] = useState(null)
+  const cityFun = (event) => {
+    setCity(event.target.value)
+  }
+
+  const show = async() => {
+    const apiurl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=48e70361c0b0aed01c55a5e9fd000f05`
+
+    await axios.get(apiurl).then((response) => {
+      setResult(response.data)
+      console.log(result)
+
+    }).catch((err)=>{
+      setResult(err.response.data)
+      console.log(err.response.data)
+    })
+     
+    //console.log(apiurl)
+  }
+
+  return(
+    <div>
+      <h1><center>Weather Report All Over World</center></h1>
+      <h1><center>By Using City Name</center></h1>
+      <h2>Developed by Birundha</h2>
+      <hr size="10" color="green"></hr>
+      <input type="text" value={city} name="city" onChange={(e) => cityFun(e)}placeholder="Enter city name"></input>
+      <input type="button "onClick={show} value="Find Weather Report"></input>
+      <hr size="10" color="green"></hr>
+      {result!==null && result.cod===200 &&<> <h2>Country and City:{result.sys.country}-{result.name}</h2></>}
+      {result!==null && result.cod===200 &&<> <h2>Main Report:{result.weather[0].main}</h2></>}
+      {result!==null && result.cod===200 &&<> <h2>Description:{result.weather[0].Description}</h2></>}
+      {result!==null && result.cod===200 &&<> <h2>Wind speed:{result.wind.speed}</h2></>}
+      {result!==null && result.cod===200 &&<> <h2>Temperature:{result.main.Temp}</h2></>}
+      {result!==null && result.cod===200 &&<> <h2>Humidity:{result.main.Humidity}</h2></>}
+      {result!==null && result.cod===200 &&<> <h2>Sea_level:{result.main.sea_level}</h2></>}
+      {result!==null && result.cod===200 &&<> <h2>C0-ord:(lat lon):{result.coord.lat} {result.coord.lon}</h2></>}
+      {result!==null && result.cod==="404" && <font color='red' size='5'><b>Result:{result.message}</b></font>}
+</div>
+     )
+}
+export default App
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*import React from 'react'
 
 function App() {
   let dis=()=>{
@@ -33,21 +239,6 @@ function App() {
 export default App
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*import React from 'react'
 
 function App() {
@@ -68,17 +259,6 @@ function App() {
     </div>
   )
 }export default App
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*import React from 'react'
@@ -151,20 +331,6 @@ export default App
 
     
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*import React from 'react'
 
 function App() {

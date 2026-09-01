@@ -1,40 +1,500 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script type="text/javascript">
-        function showhide()
-        {
-            var t=document.getElementById("pw");
-            if(t.type==="password")
-            t.type="text";
-        else
-            t.type="password";
-        }
-    </script>
-    <!-- <style type="text/css">
-        #but1
-        {
-            position: relative;
-            left: -110px;
-            border:none;
-            outline:none;
-            background-color: transparent;
-            cursor: pointer;
-        }
-    </style> -->
+
+    <title>Family Restaurant</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
-    <input id="pw" type="password" placeholder="enter password">
-    <button onclick="showhide()">show/hide</button>
-    
-    <!-- <button id="but1" onclick="showhide()">
-        <img src="./images/eye.png" width="10px">
-    </button> -->
-    <br>
-    
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <h1>🍴 Family Restaurant</h1>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+            <h2>Welcome to Family Restaurant</h2>
+
+            <p>
+                Delicious Food • Happy Family • Great Memories
+            </p>
+
+            <a href="#menu" class="btn">View Menu</a>
+        </div>
+
+    </section>
+
+
+    <!-- Menu Section -->
+    <section id="menu">
+
+        <h2 class="section-title">Our Special Menu</h2>
+
+        <div class="menu-container">
+
+            <!-- Menu 1 -->
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80">
+
+                <h3>Chicken Biryani</h3>
+
+                <p>Delicious spicy chicken biryani.</p>
+
+                <h4>₹180</h4>
+
+                <button onclick="orderFood('Chicken Biryani')">
+                    Order Now
+                </button>
+            </div>
+
+
+            <!-- Menu 2 -->
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=600&q=80">
+
+                <h3>Mutton Biryani</h3>
+
+                <p>Traditional flavorful mutton biryani.</p>
+
+                <h4>₹250</h4>
+
+                <button onclick="orderFood('Mutton Biryani')">
+                    Order Now
+                </button>
+            </div>
+
+
+            <!-- Menu 3 -->
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1562565652-a0d8f0c59eb4?auto=format&fit=crop&w=600&q=80">
+
+                <h3>Chicken Fried Rice</h3>
+
+                <p>Fresh vegetables with juicy chicken.</p>
+
+                <h4>₹160</h4>
+
+                <button onclick="orderFood('Chicken Fried Rice')">
+                    Order Now
+                </button>
+            </div>
+
+
+            <!-- Menu 4 -->
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80">
+
+                <h3>Cheese Pizza</h3>
+
+                <p>Hot pizza loaded with cheese.</p>
+
+                <h4>₹220</h4>
+
+                <button onclick="orderFood('Cheese Pizza')">
+                    Order Now
+                </button>
+            </div>
+
+
+            <!-- Menu 5 -->
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80">
+
+                <h3>Chicken Burger</h3>
+
+                <p>Soft bun with crispy chicken.</p>
+
+                <h4>₹150</h4>
+
+                <button onclick="orderFood('Chicken Burger')">
+                    Order Now
+                </button>
+            </div>
+
+
+            <!-- Menu 6 -->
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=600&q=80">
+
+                <h3>Vegetable Fried Rice</h3>
+
+                <p>Healthy and tasty vegetable fried rice.</p>
+
+                <h4>₹120</h4>
+
+                <button onclick="orderFood('Vegetable Fried Rice')">
+                    Order Now
+                </button>
+            </div>
+
+
+            <!-- Menu 7 -->
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1559314809-0d155014e29e?auto=format&fit=crop&w=600&q=80">
+
+                <h3>Paneer Tikka</h3>
+
+                <p>Grilled paneer with special spices.</p>
+
+                <h4>₹140</h4>
+
+                <button onclick="orderFood('Paneer Tikka')">
+                    Order Now
+                </button>
+            </div>
+
+
+            <!-- Menu 8 -->
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=600&q=80">
+
+                <h3>French Fries</h3>
+
+                <p>Crispy golden French fries.</p>
+
+                <h4>₹90</h4>
+
+                <button onclick="orderFood('French Fries')">
+                    Order Now
+                </button>
+            </div>
+
+
+            <!-- Menu 9 -->
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=80">
+
+                <h3>Chocolate Cake</h3>
+
+                <p>Soft and delicious chocolate cake.</p>
+
+                <h4>₹100</h4>
+
+                <button onclick="orderFood('Chocolate Cake')">
+                    Order Now
+                </button>
+            </div>
+
+
+            <!-- Menu 10 -->
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1579954115545-a95591f28bfc?auto=format&fit=crop&w=600&q=80">
+
+                <h3>Ice Cream</h3>
+
+                <p>Cold and creamy delicious ice cream.</p>
+
+                <h4>₹80</h4>
+
+                <button onclick="orderFood('Ice Cream')">
+                    Order Now
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about" class="about">
+
+        <h2>About Family Restaurant</h2>
+
+        <p>
+            Family Restaurant is a place where delicious food
+            and happy moments come together. We serve fresh,
+            tasty and quality food for everyone.
+        </p>
+
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+
+        <h2>Contact Us</h2>
+
+        <p>📍 Coimbatore, Tamil Nadu</p>
+        <p>📞 +91 98765 43210</p>
+        <p>📧 familyrestaurant@gmail.com</p>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Family Restaurant | All Rights Reserved</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
 </body>
 </html>
+  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff8f0;
+    color: #333;
+}
+
+
+Navigation 
+
+header {
+    background-color: #8b0000;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 7%;
+}
+
+nav h1 {
+    font-size: 26px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+
+Hero 
+
+.hero {
+    height: 90vh;
+
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,0.55),
+            rgba(0,0,0,0.55)
+        ),
+        url("https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+}
+
+.hero-content h2 {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: #ff9800;
+    color: white;
+    padding: 14px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 18px;
+}
+
+.btn:hover {
+    background-color: #e68900;
+}
+
+
+ Menu 
+
+#menu {
+    padding: 70px 7%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 40px;
+    color: #8b0000;
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 30px;
+}
+
+.menu-card {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+
+    text-align: center;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+
+    transition: 0.3s;
+}
+
+.menu-card:hover {
+    transform: translateY(-10px);
+}
+
+.menu-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.menu-card h3 {
+    margin: 15px 0 8px;
+    color: #8b0000;
+    font-size: 22px;
+}
+
+.menu-card p {
+    padding: 0 15px;
+    color: #666;
+}
+
+.menu-card h4 {
+    font-size: 20px;
+    margin: 12px;
+    color: #e65100;
+}
+
+.menu-card button {
+    background-color: #8b0000;
+    color: white;
+
+    border: none;
+
+    padding: 10px 25px;
+    margin-bottom: 20px;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+}
+
+.menu-card button:hover {
+    background-color: #ff9800;
+}
+
+
+About 
+
+.about {
+    background-color: #ffe0b2;
+    text-align: center;
+    padding: 70px 15%;
+}
+
+.about h2 {
+    color: #8b0000;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+
+Contact
+
+.contact {
+    text-align: center;
+    padding: 60px;
+}
+
+.contact h2 {
+    color: #8b0000;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    margin: 10px;
+    font-size: 17px;
+}
+
+
+ Footer 
+
+footer {
+    background-color: #8b0000;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+Mobile
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    .hero-content h2 {
+        font-size: 35px;
+    }
+
+    .hero-content p {
+        font-size: 17px;
+    }
+}

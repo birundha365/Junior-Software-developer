@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= device-width  , initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        #menu #menuitem
+        {
+            display: block;
+        }
+        a
+        {
+            text-decoration: none;
+            padding: 5px;
+            color:cornsilk;
+            background-color:chartreuse;
+        }
+        #dropdown
+        {
+            display: inline-block;
+        }
+        #menu
+        {
+            display: none;
+        }
+        #dropdown:hover #menu
+        {
+            display:block
+        }
+        #but1
+        {
+            cursor: pointer;
+            border: 5px salmon;
+            background-color: blue;
+            border-radius: 10px;
+            font-size: 25px;
+            box-shadow: 5px 5px 10px 2px salmon;
+        }
+        #but1:hover
+        {
+            background-color: blueviolet;
+            color: bisque;
+            font-weight: bold;
+        }
+        #menuitem:hover
+        {
+            color: brown;
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1><center>Dropdown without bootstrap</center></h1>
+    <div id="dropdown">
+    <button id="but1">dropdown-menu</button> 
+    <div id="menu">
+        <a id="menuitem" href="#">Campus</a>
+        <a id="menuitem" href="#">fees</a>
+        <a id="menuitem" href="#">hostel</a>
+        <a id="menuitem" href="#">Canteen</a>
+        <a id="menuitem" href="#">Admission</a>
+
+    </div>
+    </div>
+</body>
+</html>
